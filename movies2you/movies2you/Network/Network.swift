@@ -11,6 +11,7 @@ typealias completion<T> = (_ result: T,_ failure: String?) -> Void
 
 class Network {
     
+    // GET MOVIE BY ID
     let session: URLSession = URLSession.shared
     
     func getData(movieID: String, completion: @escaping completion<Movies?>){
@@ -32,6 +33,8 @@ class Network {
             task.resume()
         }
     }
+    
+    // GET SIMILAR MOVIES
     
 }
 
