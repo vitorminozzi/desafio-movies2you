@@ -26,4 +26,10 @@ class RelatedTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    func setupCell(withData: CellData){
+        
+        self.cellTitleLabel.text = withData.title
+    }
+    
 }

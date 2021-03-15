@@ -24,6 +24,7 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         self.viewModel.getMovie()
+        self.viewModel.getSimilarMovies()
         self.viewModel.delegate = self
         self.relatedTableView.register(UINib(nibName: "RelatedTableViewCell", bundle: nil), forCellReuseIdentifier: "RelatedTableViewCell")
         self.relatedTableView.delegate = self
@@ -44,6 +45,14 @@ extension MovieDetailsViewController: UITableViewDelegate, UITableViewDataSource
 }
 
 extension MovieDetailsViewController: ViewModelDelegate {
+    
+    func didSuccessSimilarMovies(success: Bool) {
+        
+        if success == true {
+            self.relatedTableView.reloadData()
+        }
+    }
+    
     func didSuccessGetMovie(success: Bool) {
         
         if success == true {
