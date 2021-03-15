@@ -18,6 +18,7 @@ class MovieDetailsViewModel {
     var myMovie: Movies?
     var delegate: ViewModelDelegate?
     
+    // prepare details data in controller
     func getMovie(){
         
         network.getData(movieID: "550") { (success, error) in

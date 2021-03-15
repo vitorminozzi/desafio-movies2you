@@ -25,13 +25,28 @@ class MovieDetailsViewController: UIViewController {
         
         self.viewModel.getMovie()
         self.viewModel.delegate = self
+        self.relatedTableView.register(UINib(nibName: "RelatedTableViewCell", bundle: nil), forCellReuseIdentifier: "RelatedTableViewCell")
+        self.relatedTableView.delegate = self
+        self.relatedTableView.dataSource = self
     }
 }
 
-extension MovieDetailsViewController: ViewModelDelegate{
+extension MovieDetailsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:RelatedTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "RelatedTableViewCell") as? RelatedTableViewCell
+        
+        return cell ?? UITableViewCell()
+    }
+}
+
+extension MovieDetailsViewController: ViewModelDelegate {
     func didSuccessGetMovie(success: Bool) {
         
-        if success == true{
+        if success == true {
             DispatchQueue.main.async {
                 
                 self.movieTitle.text = self.viewModel.getMovieTitle()
