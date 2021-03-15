@@ -35,5 +35,18 @@ class MovieDetailsViewModel {
         
         return myMovie?.title ?? ""
     }
+    
+    func getMovieLikes() -> String {
+        
+        let realNumber = (self.myMovie?.vote_count ?? 0) / 1000
+        let thousandAbreviation = "K"
+        
+        return "\(realNumber)\(thousandAbreviation) Likes"
+    }
+    
+    func getMoviePopularity() -> String {
+
+        return String(myMovie?.popularity ?? 0.0)
+    }
 }
 

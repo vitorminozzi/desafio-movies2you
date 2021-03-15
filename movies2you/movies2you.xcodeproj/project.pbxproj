@@ -86,10 +86,7 @@
 		E72EB28F25FFF00E002A7BEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E72EB29025FFF01A002A7BEF /* Movies.swift */,
-				E72EB29425FFF41A002A7BEF /* Genre.swift */,
-				E72EB29725FFF55D002A7BEF /* Companies.swift */,
-				E72EB29B25FFF5F2002A7BEF /* Language.swift */,
+				E77BAC7826000A8000AF39FB /* GetMovie */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,6 +98,17 @@
 				E78A6C5325FFF8F7001D6EF6 /* NetworkResources.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E77BAC7826000A8000AF39FB /* GetMovie */ = {
+			isa = PBXGroup;
+			children = (
+				E72EB29025FFF01A002A7BEF /* Movies.swift */,
+				E72EB29725FFF55D002A7BEF /* Companies.swift */,
+				E72EB29425FFF41A002A7BEF /* Genre.swift */,
+				E72EB29B25FFF5F2002A7BEF /* Language.swift */,
+			);
+			path = GetMovie;
 			sourceTree = "<group>";
 		};
 		E78A6C5725FFFC46001D6EF6 /* MovieDetails */ = {
