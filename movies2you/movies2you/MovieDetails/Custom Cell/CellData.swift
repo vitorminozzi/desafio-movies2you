@@ -11,6 +11,6 @@ struct CellData {
     
     var title: String?
     var year: String?
-    var genre: [String]?
+    var genre: String?
     var popularity: String?
 }

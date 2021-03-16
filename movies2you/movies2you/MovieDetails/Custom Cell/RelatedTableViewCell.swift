@@ -27,9 +27,12 @@ class RelatedTableViewCell: UITableViewCell {
     }
     
     
-    func setupCell(withData: CellData){
+    func setupCell(withData: CellData) {
         
         self.cellTitleLabel.text = withData.title
+        self.movieYear.text = withData.year
+        self.relatedPopularity.text = withData.popularity
+        self.movieGenre.text = withData.genre
     }
     
 }

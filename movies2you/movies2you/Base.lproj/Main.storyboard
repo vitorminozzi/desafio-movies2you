@@ -39,13 +39,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Popularity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDs-Ot-NMo">
-                                <rect key="frame" x="220" y="502" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBU-Vs-ovx">
                                 <rect key="frame" x="31" y="498.5" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,7 +52,7 @@
                                 <imageReference key="image" image="person.3.fill" catalog="system" symbolScale="large"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKk-QH-PVy">
-                                <rect key="frame" x="312" y="502" width="82" height="21"/>
+                                <rect key="frame" x="220" y="502" width="134" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,7 +67,6 @@
                         <outlet property="likesLabel" destination="xac-b6-Iy4" id="lyZ-4R-xa1"/>
                         <outlet property="movieImage" destination="1fL-Og-MK2" id="UmJ-CV-yCM"/>
                         <outlet property="movieTitle" destination="N2e-II-e7c" id="qut-5c-BM5"/>
-                        <outlet property="popularityLabel" destination="NDs-Ot-NMo" id="DMo-zt-c24"/>
                         <outlet property="popularityRate" destination="jKk-QH-PVy" id="wXO-aY-Agm"/>
                         <outlet property="popularitySymbol" destination="KXH-Tj-wZU" id="j7c-3C-8K9"/>
                         <outlet property="relatedTableView" destination="hnL-KU-uXJ" id="R6c-Yd-Bi0"/>

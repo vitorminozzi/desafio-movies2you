@@ -12,7 +12,6 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var likesLabel: UILabel!
-    @IBOutlet weak var popularityLabel: UILabel!
     @IBOutlet weak var relatedTableView: UITableView!
     @IBOutlet weak var likeSymbolImage: UIImageView!
     @IBOutlet weak var popularityRate: UILabel!
@@ -39,7 +38,7 @@ extension MovieDetailsViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:RelatedTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "RelatedTableViewCell") as? RelatedTableViewCell
-        
+        cell?.setupCell(withData: viewModel.getMyCellData(index: indexPath.row))
         return cell ?? UITableViewCell()
     }
 }
@@ -47,10 +46,6 @@ extension MovieDetailsViewController: UITableViewDelegate, UITableViewDataSource
 extension MovieDetailsViewController: ViewModelDelegate {
     
     func didSuccessSimilarMovies(success: Bool) {
-        
-        if success == true {
-            self.relatedTableView.reloadData()
-        }
     }
     
     func didSuccessGetMovie(success: Bool) {
@@ -58,6 +53,7 @@ extension MovieDetailsViewController: ViewModelDelegate {
         if success == true {
             DispatchQueue.main.async {
                 
+                self.relatedTableView.reloadData()
                 self.movieTitle.text = self.viewModel.getMovieTitle()
                 self.likesLabel.text = self.viewModel.getMovieLikes()
                 self.popularityRate.text = self.viewModel.getMoviePopularity()
