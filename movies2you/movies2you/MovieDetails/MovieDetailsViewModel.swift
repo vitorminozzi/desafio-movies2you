@@ -124,7 +124,7 @@ class MovieDetailsViewModel {
         return "n/a"
     }
     
-    func convertDateToYear(string: String) -> String{
+    func convertDateToYear(string: String) -> String { 
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"

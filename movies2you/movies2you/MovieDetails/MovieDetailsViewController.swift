@@ -17,7 +17,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var popularityRate: UILabel!
     @IBOutlet weak var popularitySymbol: UIImageView!
     
-    var viewModel = MovieDetailsViewModel()
+    private var viewModel = MovieDetailsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
